@@ -37,32 +37,69 @@
       <p> Volleyball is celebrated for its inclusivity, intensity, and the thrill of quick transitions. It fosters communication, trust, and synergy among teammates. Whether played recreationally</p> 
       <p> or competitively, it offers a full-body workout, sharpens reflexes, and how to get started or want to dive deeper into tactics, training, or famous players, I'd be happy to guide you furtner!</p>
       </section>
-</body>
-</html>
+  
+</head>
+<body>
 
   <div class="cube-container">
     <div class="cube-box">
-      <img src="lib.jpg" alt="Image 1">
-      <p> LIBERO </p>
+      <img src="L.jpg" alt="Image 1">
+      <p>LIBERO</p>
+      <button onclick="openVideo('https://youtu.be/OIL4Y7bMDOE?si=chbogo7XgwoP1Czv')">Watch Video</button>
     </div>
+
     <div class="cube-box">
-      <img src="setter.jpg" alt="Image 2">
-      <p> SETTER </p>
+      <img src="S.jpg" alt="Image 2">
+      <p>SETTER</p>
+      <button onclick="openVideo('https://www.youtube.com/embed/smM20u3hA5U')">Watch Video</button>
     </div>
+
     <div class="cube-box">
       <img src="open.jpg" alt="Image 3">
-      <p> OPEN HTTER </p>
+      <p>OPEN HITTER</p>
+      <button onclick="openVideo('https://www.youtube.com/embed/k1aJxMSUwqA')">Watch Video</button>
     </div>
-    <div class="cube-box">
-      <img src="opp.jpg" alt="Image 4">
-      <p> OPPOSITE HITTER</p>
-    </div>
-    <div class="cube-box">
-      <img src="mid.jpg" alt="Image 5">
-      <p> MIDDLE BLOCKER </p>
 
+    <div class="cube-box">
+      <img src="opp.webp" alt="Image 4">
+      <p>OPPOSITE HITTER</p>
+      <button onclick="openVideo('https://www.youtube.com/embed/qVn-WhEzwC4')">Watch Video</button>
+    </div>
+
+    <div class="cube-box">
+      <img src="MD.jpg" alt="Image 5">
+      <p>MIDDLE BLOCKER</p>
+      <button onclick="openVideo('https://www.youtube.com/embed/4A7D7c3wqgE')">Watch Video</button>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div id="videoModal" class="video-modal">
+    <span class="close-btn" onclick="closeVideo()">&times;</span>
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("videoFrame");
+
+    function openVideo(videoUrl) {
+      iframe.src = videoUrl + "?autoplay=1";
+      modal.style.display = "flex";
+    }
+
+    function closeVideo() {
+      modal.style.display = "none";
+      iframe.src = "";
+    }
+
+    // Close modal when clicking outside the video
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeVideo();
+      }
+    }
+  </script>
 
 </body>
 </html>
@@ -73,4 +110,5 @@
   </footer>
 
 </body>
+
 </html>
