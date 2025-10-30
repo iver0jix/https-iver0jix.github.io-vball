@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+    <header class="banner">
+  <video id="bannerVideo" autoplay muted loop playsinline>
+    <source src="videos/vballbg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay">
+    <h1>Volleyball Training Camp</h1>
+    <p>Official Program</p>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="reminder.html">Reminder</a></li>
+           <li><a href="registration.html"> Join us</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+</header>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form id="regForm" onsubmit="event.preventDefault(); registerUser();">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" required>
+        <option value="">Select gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" required></textarea>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" required>
+
+      <button type="submit">Register</button>
+    </form>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+   <footer>
+    &copy; 2025 Training Camp | Contact: 092-324-432-32
+  </footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAINING CAMP SITE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="banner">
+  <video id="bannerVideo" autoplay muted loop playsinline>
+    <source src="videos/vballbg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay">
+    <h1>Volleyball Training Camp</h1>
+    <p>Official Program</p>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="Homepage.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="reminder.html">Reminder</a></li>
+           <li><a href="registration.html"> Join us</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section class="hero">
+    <h2>Welcome to our Training Camp!</h2>
+    <p>Giving each playerss a new experiences and ides of playing</p>
+  
+  </section>
+
+
+  <section class="blog-posts">
+    <h2> DID YOU KNOW? </h2>
+
+    <article class="post">
+      <p> Volleyball is celebrated for its inclusivity, intensity, and the thrill of quick transitions. It fosters communication, trust, and synergy among teammates. Whether played recreationally</p> 
+      <p> or competitively, it offers a full-body workout, sharpens reflexes, and how to get started or want to dive deeper into tactics, training, or famous players, I'd be happy to guide you furtner!</p>
+      </section>
+</body>
+</html>
+<div class="cube-container">
+    <div class="cube-box">
+      <img src="image/lib.jpg" alt="Image 1">
+      <p>LIBERO</p>
+      <button onclick="openVideo('videos/jazareno.mp4')">Watch Video</button>
+    </div>
+
+    <div class="cube-box">
+      <img src="image/setter.jpg" alt="Image 2">
+      <p>SETTER</p>
+      <button onclick="openVideo('videos/jerico.mp4')">Watch Video</button>
+    </div>
+
+    <div class="cube-box">
+      <img src="image/open.jpg" alt="Image 3">
+      <p>OPEN HITTER</p>
+      <button onclick="openVideo('videos/alys.mp4')">Watch Video</button>
+    </div>
+
+    <div class="cube-box">
+      <img src="image/opp.jpg" alt="Image 4">
+      <p>OPPOSITE HITTER</p>
+      <button onclick="openVideo('videos/yuji.mp4')">Watch Video</button>
+    </div>
+
+    <div class="cube-box">
+      <img src="image/mid.jpg" alt="Image 5">
+      <p>MIDDLE BLOCKER</p>
+      <button onclick="openVideo('videos/fifi.mp4')">Watch Video</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="videoModal" class="video-modal">
+    <span class="close-btn" onclick="closeVideo()">&times;</span>
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("videoFrame");
+
+    function openVideo(videoUrl) {
+      iframe.src = videoUrl + "?autoplay=1";
+      modal.style.display = "flex";
+    }
+
+    function closeVideo() {
+      modal.style.display = "none";
+      iframe.src = "";
+    }
+
+    // Close modal when clicking outside the video
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeVideo();
+      }
+    }
+  </script>
+
+
+    <footer>
+        <p>© 2025 Training Camp | Contact: 092-324-432-32</p>
+    </footer>
+</body>
+</html>
