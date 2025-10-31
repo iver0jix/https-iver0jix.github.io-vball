@@ -136,7 +136,7 @@ header p {
 .container {
   flex: 1; 
   text-align: center;
- background: url(/image/reg.jpg);
+ background: white;
   margin: 20px auto;
   padding: 20px;
   border-radius: 8px;
@@ -370,4 +370,5 @@ footer {
     /* If you haven't already, ensure the padding inside doesn't make the text overlap the buttons */
     /* If the footer is position: fixed, you also need to ensure the body has padding-bottom */
 }
+
 
